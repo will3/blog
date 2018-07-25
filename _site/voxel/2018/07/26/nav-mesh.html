@@ -6,11 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Will Zhou</title>
-  <meta name="description" content="">
+  <title>Nav Mesh</title>
+  <meta name="description" content="Today I implemented routing. First I tried AStar. Problem with voxel AStar is, units can only move at 45 degrees, and for me it doesn’t look great. Then I fo...">
 
   <link rel="stylesheet" href="/blog/assets/main.css">
-  <link rel="canonical" href="http://localhost:4000/blog/">
+  <link rel="canonical" href="http://localhost:4000/blog/voxel/2018/07/26/nav-mesh.html">
   <link rel="alternate" type="application/rss+xml" title="Will Zhou" href="/blog/feed.xml">
   
   
@@ -67,38 +67,32 @@
 
     <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <div class="home">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
-  <h1 class="page-heading">Posts</h1>
-  
-  
-
-
-  <ul class="post-list">
-    
-      <li>
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Nav Mesh</h1>
+    <p class="post-meta">
+      <time datetime="2018-07-26T03:40:00+12:00" itemprop="datePublished">
         
-        <span class="post-meta">Jul 26, 2018</span>
+        Jul 26, 2018
+      </time>
+      </p>
+  </header>
 
-        <h2>
-          <a class="post-link" href="/blog/voxel/2018/07/26/nav-mesh.html">Nav Mesh</a>
-        </h2>
-      </li>
-    
-      <li>
-        
-        <span class="post-meta">Jul 23, 2018</span>
+  <div class="post-content" itemprop="articleBody">
+    <p>Today I implemented routing.<br />
+First I tried AStar. Problem with voxel AStar is, units can only move at 45 degrees, and for me it doesn’t look great.<br />
+Then I found out about Nav Mesh.<br />
+Nav mesh is a simplified mesh, usually baked, used for navigation purposes. It consists of convex polygons only, so units can move freely within the polygons in a straight line. Polygons are then linked in a graph, and game can AStar through the polygons, essentially.</p>
 
-        <h2>
-          <a class="post-link" href="/blog/side/projects/2018/07/23/side-projects.html">Side Projects</a>
-        </h2>
-      </li>
-    
-  </ul>
+<p>Looks great:</p>
 
-  <p class="rss-subscribe">subscribe <a href="/blog/feed.xml">via RSS</a></p>
+<p><img src="/blog/assets/navmesh.gif" alt="" width="600px" /></p>
 
-</div>
+  </div>
+
+  
+</article>
 
       </div>
     </main>
